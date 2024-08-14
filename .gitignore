@@ -1,0 +1,14 @@
+.idea/
+
+./Client/.angular/
+./Client/.firebase/
+./Client/.vscode
+./Client/node_modules/
+./Client/dist/
+./Client/firebase.json
+./Client/.firebaserc
+./Client/package-lock.json
+
+./Server/node_modules/
+./Server/.env
+./Server/package-lock.json
