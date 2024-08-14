@@ -1,0 +1,22 @@
+<section class="explore px-4">
+  <div class="explore__box my-5 py-3 d-flex justify-content-center">
+    <div class="heading">
+      <h2>Explore Categories</h2>
+    </div>
+  </div>
+  <p-carousel [value]="categories" [numVisible]="5" [numScroll]="1" [circular]="true"
+              [responsiveOptions]="responsiveOptions" [showIndicators]="false">
+    <ng-template let-category pTemplate="item">
+      <div class="cat-card mt-3">
+        <div class="cat-section">
+          <div class="cat-img d-flex justify-content-center">
+            <img ngSrc="{{category.image}}" alt="Laptop Image" width="150" height="150">
+          </div>
+          <div class="cat-name p-2">
+            <h4>{{ category.name }}</h4>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</section>

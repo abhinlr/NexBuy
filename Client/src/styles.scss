@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+@import "_mixins";
+:root {
+  --primary-color: #007bff;
+  --primary-color-light: #057fff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: 1.15;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  @include respond('large') {
+    font-size: 93.75%; // 15px
+  }
+
+  @include respond('medium') {
+    font-size: 87.5%; // 14px
+  }
+
+  @include respond('small') {
+    font-size: 81.25%; // 13px
+  }
+
+  @include respond('xlarge') {
+    font-size: 112.5%; // 18px
+  }
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6,p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Hide scrollbars but allow scrolling */
+html, body {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relCenter {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  border-radius: 2rem;
+  outline: none;
+  color: #333;
+  padding: .5rem 1rem;
+
+  &::placeholder {
+    color: #aaa;
+  }
+
+  &:focus {
+    background-color: #fff;
+    color: #000;
+  }
+}

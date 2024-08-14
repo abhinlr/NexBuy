@@ -1,0 +1,68 @@
+.explore {
+  &__box {
+    position: relative;
+    display: inline-block;
+
+    ::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 5%;
+      height: 1px;
+      background-color: #000;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -15px;
+    }
+  }
+
+  .cat-card {
+    .cat-section {
+      width: 15rem;
+    }
+    .cat-img {
+      border-radius: 1rem 1rem 0 0;
+      background-color: #f7f7f7;
+      overflow: hidden;
+
+      img{
+        height: 10rem;
+        width: 10rem;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .p-carousel-container {
+    padding: 0 1rem;
+  }
+  .p-carousel-prev, .p-carousel-next {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 0 1rem;
+
+    .p-icon-wrapper {
+      color: #000;
+    }
+
+    &:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .p-carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

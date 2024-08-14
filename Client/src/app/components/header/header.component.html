@@ -1,0 +1,36 @@
+<header class="header">
+  <nav class="header__nav p-4">
+    <div class="container">
+      <div class="header__main d-grid align-items-center">
+        <div class="header__logo"><h3><i class="fa-solid fa-forward"></i>NexBuy</h3></div>
+        <div class="header__menu d-flex align-items-center justify-content-evenly">
+          <div><a routerLink="/"><h4>Home</h4></a></div>
+          <div><a routerLink=""><h4>About</h4></a></div>
+          <div><a routerLink=""><h4>Deals</h4></a></div>
+        </div>
+        <div class="header__account d-flex align-items-center justify-content-end">
+          <div class="header__account-search">
+            <div class="search-bar">
+              <form action="" class="d-flex align-items-center justify-content-end">
+                <input type="text" class="search-input expand" placeholder="Search">
+                <a class="search-icon z-1">
+                  <h4><i class="fa-solid fa-magnifying-glass" type="submit"></i></h4>
+                </a>
+              </form>
+            </div>
+          </div>
+          <div class="header__account-cart">
+            <a routerLink="/cart"><h4><i class="fa-solid fa-cart-shopping"></i></h4></a>
+          </div>
+          <div class="header__account-profile">
+            @if (isLoggedIn){
+              <a><h4>Logout</h4></a>
+            } @else {
+              <a routerLink="/login"><h4>Login</h4></a>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

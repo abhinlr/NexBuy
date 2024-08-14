@@ -1,0 +1,19 @@
+.latest {
+
+  &__box {
+    position: relative;
+    display: inline-block;
+
+    ::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 5%;
+      height: 1px;
+      background-color: #000;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -15px;
+    }
+  }
+}

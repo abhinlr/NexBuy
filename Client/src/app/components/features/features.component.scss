@@ -1,0 +1,38 @@
+.feature {
+
+  &__box {
+    position: relative;
+    display: inline-block;
+
+    ::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 5%;
+      height: 1px;
+      background-color: #000;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -15px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+    &-icon {
+      font-size: 2.5rem;
+      color: #c19a83;
+    }
+  }
+}
